@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var person = {
+            name:"传播操作符对象",
+            address:"湖北",
+            link:"www.baidu.com",
+            phone:1234567,
+            go(){
+                console.log("打印go方法");
+            }
+        };
+
+        //结构对象
+        var {name,address,...person2} = person;
+        console.log(name);
+        console.log(address);
+        //  ...person2 传播操作符，将这个结构出来的对象的剩余部分全部都给person2
+        console.log(person2);
+    </script>
+</body>
+</html>

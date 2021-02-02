@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var title = "这个是一个标题";
+        var link = "www.baidu.com";
+        let info = {
+            title,
+            link,
+            go(){
+                console.log("这个是一个go方法的打印");
+            }
+        }
+        
+        // 使用[]的方式
+        console.log(info["title"]); 
+        console.log(info["link"]); 
+        info["go"]();    //注意这个方法体的()是在[]的后面
+        
+        //ES6使用对象解构的方式
+        var {title,link,go} = info;
+        console.log(title);
+        console.log(link);
+        go();
+
+    </script>
+</body>
+</html>
