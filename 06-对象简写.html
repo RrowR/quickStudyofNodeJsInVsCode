@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //传统方式来编写
+        let info = {
+            title:"这个是我的个人标题",
+            link:"www.baidu.com",
+            go:function(){
+                console.log("这个是一个go方法的打印");
+            }
+        };
+
+        //使用ES6语法来编写
+        //如果key和定义的变量一直，就可以直接在对象里使用
+        //如果value是一个函数，那么这个对象里的方法可以直接去掉:function
+        var title = "这个是一个标题";
+        var link = "www.baidu.com";
+        let info2 = {
+            title,
+            link,
+            go(){
+                console.log("这个是一个go方法的打印2");
+            }
+        }
+
+        console.log(info.title);
+        console.log(info2.title);
+        console.log(info.link);
+        console.log(info2.link);
+        //注意这里不需要使用console来进行打印，直接使用对象来调用方法即可
+        info.go();
+        info2.go();
+    </script>
+</body>
+</html>

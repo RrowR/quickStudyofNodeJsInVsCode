@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <p>账号:<input type="text" id="account"></p>
+        <p>密码:<input type="password" id="password"></p>
+        <p><input type="button" value="提交" id="loginbtn"></p>
+    </form>
+
+    <script>
+        // document.getElementById("loginbtn").onclick = function(){}
+        $("#loginbtn").on("click",function(){
+            var account = $("#account").val();
+            var password = $("#password").val();
+            //对象的简写ES6
+            var params = {account,password}
+            $.ajax({
+                type:"post",
+                url:"xxx",
+                data:params,
+                // ES6去掉:function
+                success(){
+
+                }
+            })
+        });
+
+    </script>
+</body>
+</html>
