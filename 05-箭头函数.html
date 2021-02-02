@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //原版
+        var sum = function(a,b){
+            return a+b;
+        }            
+        console.log(sum(1,2));
+
+        //使用箭头函数
+        var sum2 = (a,b) => {
+            return a+b;
+        }
+        console.log(sum2(2,2));
+
+        //改进版,省略的前提是这个{}里面没有逻辑体
+        var sum3 = (a,b)=> a+b;
+        console.log(sum3(2,3));
+
+        //{}不能省略，因为里面还有逻辑体
+        var sum4 = (a,b)=>{
+            num = a+b;
+            return num;
+        }
+        console.log(sum4(3,3));
+
+        //将一个数组的每一个值都x2
+        var arr = [1,2,3,4,5];
+        var arr2 = arr.map(function(obj){
+            return obj*2;
+        });
+        console.log(arr2);
+        //使用箭头函数来进行改进,这里省去大括号的原因是因为只有1个参数才可以
+        var arr3 = [1,2,3,4,5,6];
+        var result = arr3.map((obj)=>obj*2);
+        console.log(result);
+    </script>
+</body>
+</html>
