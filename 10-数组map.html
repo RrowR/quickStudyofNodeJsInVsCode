@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //传统方式
+        let arr = [1,2,3,4,5];
+        let arr2 = [];
+        for(let i = 0;i<arr.length;i++){
+            arr2.push(arr[i]*2);
+        }
+        console.log(arr2);
+        
+        //map方法会自带遍历数组，并将执行的操作回填给数组中的每个元素的位置
+        var newArrMap = arr.map(function(ele){
+            return ele*2;
+        })
+        console.log(newArrMap);
+
+        //map 处理对象数据 
+        var newArrMap2 = arr.map(ele=>ele*2);
+        console.log(newArrMap2);
+        
+        //处理对象数据
+        var user = [{"name":"小东",age:18,hobby:"篮球"},{"name":"小红",age:19,hobby:"足球"},{"name":"小方",age:20,hobby:"pingpong"}];
+        var newusers = user.map(function(ele){
+            ele.age = ele.age + 1;
+            ele.check = true;   //在这个ele对象上添加一个元素check为true，可以解决代码的臃肿
+            return ele;
+        });
+        console.log(newusers);
+
+    </script>
+</body>
+</html>
